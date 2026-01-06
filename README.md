@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Estate Kenya - Public Frontend (MVP)
 
-## Getting Started
+A mobile-first, performance-focused real estate platform for Kenya.
 
-First, run the development server:
+## Features
+- **Modern UI:** Built with Tailwind CSS v4 and Next.js App Router.
+- **Trust-First:** Verified agent badges, clear typography, professional design.
+- **Mobile Optimized:** Fast loading, responsive layout, large touch targets.
+- **Core User Journeys:**
+  - Browse properties with text search filters.
+  - View detailed property info with specs and map location.
+  - Contact agents via WhatsApp or Inquiry Form.
+  - View Agent Profiles and their listings.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Framework:** Next.js 15+ (App Router)
+- **Styling:** Tailwind CSS v4
+- **Icons:** Lucide React
+- **Language:** TypeScript
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup & Run
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  **Run Development Server:**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+3.  **Build for Production:**
+    ```bash
+    npm run build
+    npm start
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
+- `src/app`: Pages and Layouts
+- `src/components/ui`: Reusable atomic components (Button, Card, etc.)
+- `src/components/features`: Complex feature components (InquiryForm, Filters)
+- `src/lib`: Utilities and Mock Data
+- `src/types`: TypeScript interfaces
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Decisions
+- **Mock Data:** Currently using `src/lib/mock-data.ts` to simulate backend for UI validation.
+- **Images:** Using Unsplash placeholders. In prod, these would be served via CDN.
+- **Performance:** Server Components used for initial render.
