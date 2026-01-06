@@ -1,50 +1,105 @@
-# Smart Estate Kenya - Public Frontend (MVP)
+# Smart Estate Kenya - Public Frontend
 
-A mobile-first, performance-focused real estate platform for Kenya.
+The public-facing website for Smart Estate Kenya real estate platform.
 
-## Features
-- **Modern UI:** Built with Tailwind CSS v4 and Next.js App Router.
-- **Trust-First:** Verified agent badges, clear typography, professional design.
-- **Mobile Optimized:** Fast loading, responsive layout, large touch targets.
-- **Core User Journeys:**
-  - Browse properties with text search filters.
-  - View detailed property info with specs and map location.
-  - Contact agents via WhatsApp or Inquiry Form.
-  - View Agent Profiles and their listings.
+## 🏠 Features
 
-## Tech Stack
-- **Framework:** Next.js 15+ (App Router)
-- **Styling:** Tailwind CSS v4
-- **Icons:** Lucide React
-- **Language:** TypeScript
+- Property listings and search functionality
+- Agent profiles and contact information
+- Detailed property views with image galleries
+- Inquiry forms and lead generation
+- Responsive design for all devices
+- Modern UI with Tailwind CSS
 
-## Setup & Run
+## 🚀 Tech Stack
 
-1.  **Install Dependencies:**
-    ```bash
-    npm install
-    ```
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
-2.  **Run Development Server:**
-    ```bash
-    npm run dev
-    ```
-    Open [http://localhost:3000](http://localhost:3000)
+## 🌐 Live Demo
 
-3.  **Build for Production:**
-    ```bash
-    npm run build
-    npm start
-    ```
+- **Production**: [Will be available after deployment]
+- **Local Development**: http://localhost:3000
 
-## Project Structure
-- `src/app`: Pages and Layouts
-- `src/components/ui`: Reusable atomic components (Button, Card, etc.)
-- `src/components/features`: Complex feature components (InquiryForm, Filters)
-- `src/lib`: Utilities and Mock Data
-- `src/types`: TypeScript interfaces
+## ⚙️ Environment Variables
 
-## Key Decisions
-- **Mock Data:** Currently using `src/lib/mock-data.ts` to simulate backend for UI validation.
-- **Images:** Using Unsplash placeholders. In prod, these would be served via CDN.
-- **Performance:** Server Components used for initial render.
+Configure these in your Vercel dashboard:
+
+```env
+NEXT_PUBLIC_API_URL=https://your-backend-api-url.com
+```
+
+## 🛠️ Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## 📦 Deployment to Vercel
+
+### Automatic Deployment (Recommended)
+
+1. **Connect Repository**: 
+   - Go to [Vercel Dashboard](https://vercel.com/dashboard)
+   - Click "New Project"
+   - Import this repository: `https://github.com/Majorstanwachira5/frontend-real-estate`
+
+2. **Configure Settings**:
+   - Framework Preset: Next.js
+   - Root Directory: `./` (default)
+   - Build Command: `npm run build` (default)
+   - Output Directory: `.next` (default)
+
+3. **Set Environment Variables**:
+   ```
+   NEXT_PUBLIC_API_URL = https://your-backend-api-url.com
+   ```
+
+4. **Deploy**: Click "Deploy" - automatic deployments on every push to main
+
+### Manual Deployment
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy
+vercel --prod
+```
+
+## 🔗 Related Repositories
+
+- **Backend API**: [smart-estate-kenya](https://github.com/Majorstanwachira5/smart-estate-kenya)
+- **Agency Dashboard**: [Agent-real-estate](https://github.com/Majorstanwachira5/Agent-real-estate)
+- **Admin Dashboard**: [admin-real-estate](https://github.com/Majorstanwachira5/admin-real-estate)
+
+## 📱 Port Configuration
+
+- **Public Frontend**: Port 3000
+- **Agency Frontend**: Port 8080  
+- **Admin Frontend**: Port 8081
+- **Backend API**: Port 5000
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
